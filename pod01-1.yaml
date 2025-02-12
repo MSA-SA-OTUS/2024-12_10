@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: p01-01
+  labels: 
+     app: pod01
+spec:
+  containers:
+    - name: c01
+      image: vadimkuzmichev/webapp01:v2
+      livenessProbe:
+        httpGet:
+          path: /ping
+          port: 8080
+        initialDelaySeconds: 5
+        periodSeconds: 3

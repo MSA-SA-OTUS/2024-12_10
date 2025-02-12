@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: p02f
+spec:
+  containers:
+    - name: c01
+      image: vadimkuzmichev/webapp02:v2
+  nodeSelector:
+      os: linux3
